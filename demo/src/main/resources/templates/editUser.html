@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+    <title>edit </title>
+</head>
+<body>
+<form action="#" th:action="@{/users/edit}" th:object="${user}" th:method="PUT">
+    <input type="hidden" th:field="*{id}" th:value="*{id}"/>
+    <p>name: <label>
+        <input type="text" th:field="*{firstName}" th:value="*{firstName}"  th:charset="utf-8"/>
+    </label></p>
+    <p>surname: <label>
+        <input type="text" th:field="*{lastName}" th:value="*{lastName}" />
+    </label></p>
+    <p>email: <label>
+        <input type="text" th:field="*{email}" th:value="*{email}" th:charset="utf-8"/>
+    </label></p>
+    <p><input type="submit" value="save changes"/></p>
+</form>
+</body>
+</html>
+
+
+
+
